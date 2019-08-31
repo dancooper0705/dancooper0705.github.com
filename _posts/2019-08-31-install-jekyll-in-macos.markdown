@@ -29,7 +29,7 @@ bash-3.2$ ruby -v
 ruby 2.6.3p62 (2019-04-16 revision 67580) [x86_64-darwin17]
 bash-3.2$ export PATH=$HOME/.gem/ruby/2.6.0/bin:$PATH
 bash-3.2$ echo $PATH
-/Users/chengyihe/.gem/ruby/2.6.0/bin:/usr/local/opt/ruby/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+/Users/dancooper/.gem/ruby/2.6.0/bin:/usr/local/opt/ruby/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 {% endhighlight %}
 
 ## check if RubyGems’s path environment variable contains ~/.gem/ruby/2.6.0/bin
@@ -39,18 +39,18 @@ RubyGems Environment:
   - RUBYGEMS VERSION: 3.0.3
   - RUBY VERSION: 2.6.3 (2019-04-16 patchlevel 62) [x86_64-darwin17]
   - INSTALLATION DIRECTORY: /usr/local/lib/ruby/gems/2.6.0
-  - USER INSTALLATION DIRECTORY: /Users/chengyihe/.gem/ruby/2.6.0
+  - USER INSTALLATION DIRECTORY: /Users/dancooper/.gem/ruby/2.6.0
   - RUBY EXECUTABLE: /usr/local/opt/ruby/bin/ruby
   - GIT EXECUTABLE: /usr/bin/git
   - EXECUTABLE DIRECTORY: /usr/local/lib/ruby/gems/2.6.0/bin
-  - SPEC CACHE DIRECTORY: /Users/chengyihe/.gem/specs
+  - SPEC CACHE DIRECTORY: /Users/dancooper/.gem/specs
   - SYSTEM CONFIGURATION DIRECTORY: /usr/local/Cellar/ruby/2.6.3/etc
   - RUBYGEMS PLATFORMS:
     - ruby
     - x86_64-darwin-17
   - GEM PATHS:
      - /usr/local/lib/ruby/gems/2.6.0
-     - /Users/chengyihe/.gem/ruby/2.6.0
+     - /Users/dancooper/.gem/ruby/2.6.0
      - /usr/local/Cellar/ruby/2.6.3/lib/ruby/gems/2.6.0
   - GEM CONFIGURATION:
      - :update_sources => true
@@ -60,7 +60,7 @@ RubyGems Environment:
   - REMOTE SOURCES:
      - https://rubygems.org/
   - SHELL PATH:
-     - /Users/chengyihe/.gem/ruby/2.6.0/bin
+     - /Users/dancooper/.gem/ruby/2.6.0/bin
      - /usr/local/opt/ruby/bin
      - /usr/local/bin
      - /usr/bin
