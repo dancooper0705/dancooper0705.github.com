@@ -2,7 +2,8 @@
 layout: post
 title: "run-jekyll-in-macos"
 date:  2019-08-31 11:12:00  +0800
-categories: ruby
+categories: [dev]
+tags: [jekyll]
 ---
 
 ## objective

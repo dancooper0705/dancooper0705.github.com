@@ -2,7 +2,8 @@
 layout: post
 title: "install-ruby-with-rbenv-in-macos"
 date:  2019-08-31 10:55:00  +0800
-categories: ruby
+categories: [dev]
+tags: [ruby]
 ---
 
 ## objective

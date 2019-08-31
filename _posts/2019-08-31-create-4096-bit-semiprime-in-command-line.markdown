@@ -2,7 +2,8 @@
 layout: post
 title:  "create-4096-bit-semiprime-in-command-line"
 date:   2019-08-31 13:33:38  +0800
-categories: dev
+categories: [dev]
+tags: [security]
 ---
 
 ## what is semiprime

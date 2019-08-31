@@ -2,7 +2,8 @@
 layout: post
 title:  "install-homebrew-in-macos"
 date:   2019-08-31 09:20:38  +0800
-categories: homebrew
+categories: [dev]
+tags: [homebrew]
 ---
 
 ## What is homebrew?
