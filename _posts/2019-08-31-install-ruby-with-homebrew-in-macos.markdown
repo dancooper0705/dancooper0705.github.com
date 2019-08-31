@@ -6,12 +6,21 @@ categories: ruby
 ---
 
 ## objective
-Installing different version of ruby with homebrew in macOS.
+Install different version of ruby with homebrew in macOS.
 
 ## motivation
 The default ruby version in macOS High Sierra is 2.3.x, but some ruby packages requires ruby >= 2.4.0
 
-## check system ruby version 
+## environment
+macOS 10.13.6 High Sierra
+{% highlight bash %}
+bash-3.2$ sw_vers
+ProductName:    Mac OS X
+ProductVersion: 10.13.6
+BuildVersion:   17G4015
+{% endhighlight %}
+
+## check system ruby version
 The default version of ruby in macOS 10.13, i.e., High Sierra, is 2.3.x.
 {% highlight bash %}
 bash-3.2$ which ruby
@@ -21,7 +30,7 @@ ruby 2.3.7p456 (2018-03-28 revision 63024) [universal.x86_64-darwin17]
 search t
 {% endhighlight %}
 
-## search for the latest ruby with homebrew 
+## search for the latest ruby with homebrew
 Search for the latest ruby formulae.
 {% highlight bash %}
 bash-3.2$ brew search ruby
