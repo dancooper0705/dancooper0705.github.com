@@ -19,7 +19,7 @@ BuildVersion:   17G4015
 {% endhighlight %}
 
 ## install jekyll
-[install jekyll in macOS](2019-08-31-install-jekyll-in-macos.markdown)
+[install jekyll in macOS](install-jekyll-in-macos.html)
 
 ## use jekyll to create new blog
 {% highlight bash %}
