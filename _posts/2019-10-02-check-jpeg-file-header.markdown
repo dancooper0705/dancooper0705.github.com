@@ -3,7 +3,7 @@ layout: post
 title: "check-jpeg-file-header"
 date:  2019-10-02 15:35:00  +0800
 categories: [dev]
-tags: [jpeg]
+tags: [image, jpeg]
 ---
 
 ## synopsis
