@@ -16,7 +16,9 @@ BuildVersion:   17G4015
 ```
 
 ## what is markdown language
-A superset of html language. The file extension is md or markdown.
++ A markdown is a markup language.
++ html and xml are also markup language.
++ markdown is superset of html language.
 
 ## headers
 ```markdown
