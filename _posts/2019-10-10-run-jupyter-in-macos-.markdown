@@ -89,5 +89,5 @@ bash-3.2$ jupyter notebook
 * jupyter notebook starts a web server at localhost
 * we could use the browser to manage a notebook: add source code and documentation
 * we could save the notebook as a file such as Hello Jupyter.ipynb.
-* the ipynb could be run in website such as google Colaboratory.
+* the saved ipynb file could be run in website such as google Colaboratory.
 * we could also export a notebook as a latex, html, pdf, and etc.
