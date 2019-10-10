@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "what is pandoc"
+title: "run-pandoc-in-macos"
 date:  2019-10-09 14:00:00  +0800
 categories: [dev]
 tags: [pandoc]
