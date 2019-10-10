@@ -88,13 +88,24 @@ bash-3.2$ jupyter notebook
 ## how it works
 * jupyter notebook starts a web server at localhost
 * we could use the browser to manage a notebook: add source code and documentation
-* we could save the notebook as a file such as Hello Jupyter.ipynb.
-* the saved ipynb file could be run in website such as google Colaboratory.
+* we could save the notebook as a file such as hello.ipynb.
+* the saved ipynb file could be run in a juypter notebook website such as google Colaboratory.
 * we could also export a notebook as a latex, html, pdf, and etc.
 
-## how to export a notebook file as html files
+## export a notebook as a html file
 ```bash
-bash-3.2$ jupyter nbconvert --to html --template full Hello\ Jupyter.ipynb 
-[NbConvertApp] Converting notebook Hello Jupyter.ipynb to html
-[NbConvertApp] Writing 285736 bytes to Hello Jupyter.html
+bash-3.2$ jupyter nbconvert --to html --template full hello.ipynb 
+[NbConvertApp] Converting notebook hello.ipynb to html
+[NbConvertApp] Writing 285728 bytes to hello.html
+bash-3.2$ open hello.html 
 ```
+
+## export a notebook as a latex file
+```bash
+bash-3.2$ jupyter nbconvert --to latex hello.ipynb
+[NbConvertApp] Converting notebook hello.ipynb to latex
+[NbConvertApp] Writing 33423 bytes to hello.tex
+```
+
+## convert the exported latex file into a pdf file
+[run-latex-in-macos](run-latex-in-macos.html)
