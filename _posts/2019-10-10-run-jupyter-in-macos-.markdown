@@ -91,3 +91,10 @@ bash-3.2$ jupyter notebook
 * we could save the notebook as a file such as Hello Jupyter.ipynb.
 * the saved ipynb file could be run in website such as google Colaboratory.
 * we could also export a notebook as a latex, html, pdf, and etc.
+
+## how to export a notebook file as html files
+```bash
+bash-3.2$ jupyter nbconvert --to html --template full Hello\ Jupyter.ipynb 
+[NbConvertApp] Converting notebook Hello Jupyter.ipynb to html
+[NbConvertApp] Writing 285736 bytes to Hello Jupyter.html
+```
