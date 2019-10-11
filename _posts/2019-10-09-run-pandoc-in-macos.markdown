@@ -32,31 +32,31 @@ Bash completion has been installed to:
 ==> Summary
 �  /usr/local/Cellar/pandoc/2.7.3: 179 files, 75.5MB
 ==> `brew cleanup` has not been run in 30 days, running now...
-Removing: /Users/chengyihe/Library/Caches/Homebrew/gcc@7--7.4.0.high_sierra.bottle.tar.gz... (75.4MB)
-Removing: /Users/chengyihe/Library/Caches/Homebrew/gdbm--1.18.1.high_sierra.bottle.1.tar.gz... (192.3KB)
-Removing: /Users/chengyihe/Library/Caches/Homebrew/libmpc--1.1.0.high_sierra.bottle.tar.gz... (114.2KB)
-Removing: /Users/chengyihe/Library/Caches/Homebrew/openssl--1.0.2r.high_sierra.bottle.tar.gz... (3.7MB)
-Removing: /Users/chengyihe/Library/Caches/Homebrew/openssl--1.0.2s.high_sierra.bottle.tar.gz... (3.7MB)
-Removing: /Users/chengyihe/Library/Caches/Homebrew/openssl@1.1--1.1.1c.high_sierra.bottle.tar.gz... (5.2MB)
-Removing: /Users/chengyihe/Library/Caches/Homebrew/pkg-config--0.29.2.high_sierra.bottle.tar.gz... (235.8KB)
-Removing: /Users/chengyihe/Library/Caches/Homebrew/python--3.7.3.high_sierra.bottle.tar.gz... (14.6MB)
-Removing: /Users/chengyihe/Library/Caches/Homebrew/readline--8.0.0_1.high_sierra.bottle.tar.gz... (516.9KB)
-Removing: /Users/chengyihe/Library/Caches/Homebrew/ruby--2.6.3.high_sierra.bottle.tar.gz... (9.2MB)
-Removing: /Users/chengyihe/Library/Caches/Homebrew/ruby-build--20190828.tar.gz... (61.5KB)
-Removing: /Users/chengyihe/Library/Caches/Homebrew/sqlite--3.28.0.high_sierra.bottle.tar.gz... (1.8MB)
-Removing: /Users/chengyihe/Library/Caches/Homebrew/xz--5.2.4.high_sierra.bottle.tar.gz... (372.7KB)
-Removing: /Users/chengyihe/Library/Logs/Homebrew/pkg-config... (64B)
-Removing: /Users/chengyihe/Library/Logs/Homebrew/gdbm... (64B)
-Removing: /Users/chengyihe/Library/Logs/Homebrew/python... (3 files, 132.6KB)
-Removing: /Users/chengyihe/Library/Logs/Homebrew/libyaml... (64B)
-Removing: /Users/chengyihe/Library/Logs/Homebrew/readline... (64B)
-Removing: /Users/chengyihe/Library/Logs/Homebrew/ruby-build... (2 files, 179B)
-Removing: /Users/chengyihe/Library/Logs/Homebrew/xz... (64B)
-Removing: /Users/chengyihe/Library/Logs/Homebrew/autoconf... (64B)
-Removing: /Users/chengyihe/Library/Logs/Homebrew/openssl@1.1... (64B)
-Removing: /Users/chengyihe/Library/Logs/Homebrew/openssl... (64B)
-Removing: /Users/chengyihe/Library/Logs/Homebrew/ruby... (64B)
-Removing: /Users/chengyihe/Library/Logs/Homebrew/rbenv... (64B)
+Removing: /Users/dancooper/Library/Caches/Homebrew/gcc@7--7.4.0.high_sierra.bottle.tar.gz... (75.4MB)
+Removing: /Users/dancooper/Library/Caches/Homebrew/gdbm--1.18.1.high_sierra.bottle.1.tar.gz... (192.3KB)
+Removing: /Users/dancooper/Library/Caches/Homebrew/libmpc--1.1.0.high_sierra.bottle.tar.gz... (114.2KB)
+Removing: /Users/dancooper/Library/Caches/Homebrew/openssl--1.0.2r.high_sierra.bottle.tar.gz... (3.7MB)
+Removing: /Users/dancooper/Library/Caches/Homebrew/openssl--1.0.2s.high_sierra.bottle.tar.gz... (3.7MB)
+Removing: /Users/dancooper/Library/Caches/Homebrew/openssl@1.1--1.1.1c.high_sierra.bottle.tar.gz... (5.2MB)
+Removing: /Users/dancooper/Library/Caches/Homebrew/pkg-config--0.29.2.high_sierra.bottle.tar.gz... (235.8KB)
+Removing: /Users/dancooper/Library/Caches/Homebrew/python--3.7.3.high_sierra.bottle.tar.gz... (14.6MB)
+Removing: /Users/dancooper/Library/Caches/Homebrew/readline--8.0.0_1.high_sierra.bottle.tar.gz... (516.9KB)
+Removing: /Users/dancooper/Library/Caches/Homebrew/ruby--2.6.3.high_sierra.bottle.tar.gz... (9.2MB)
+Removing: /Users/dancooper/Library/Caches/Homebrew/ruby-build--20190828.tar.gz... (61.5KB)
+Removing: /Users/dancooper/Library/Caches/Homebrew/sqlite--3.28.0.high_sierra.bottle.tar.gz... (1.8MB)
+Removing: /Users/dancooper/Library/Caches/Homebrew/xz--5.2.4.high_sierra.bottle.tar.gz... (372.7KB)
+Removing: /Users/dancooper/Library/Logs/Homebrew/pkg-config... (64B)
+Removing: /Users/dancooper/Library/Logs/Homebrew/gdbm... (64B)
+Removing: /Users/dancooper/Library/Logs/Homebrew/python... (3 files, 132.6KB)
+Removing: /Users/dancooper/Library/Logs/Homebrew/libyaml... (64B)
+Removing: /Users/dancooper/Library/Logs/Homebrew/readline... (64B)
+Removing: /Users/dancooper/Library/Logs/Homebrew/ruby-build... (2 files, 179B)
+Removing: /Users/dancooper/Library/Logs/Homebrew/xz... (64B)
+Removing: /Users/dancooper/Library/Logs/Homebrew/autoconf... (64B)
+Removing: /Users/dancooper/Library/Logs/Homebrew/openssl@1.1... (64B)
+Removing: /Users/dancooper/Library/Logs/Homebrew/openssl... (64B)
+Removing: /Users/dancooper/Library/Logs/Homebrew/ruby... (64B)
+Removing: /Users/dancooper/Library/Logs/Homebrew/rbenv... (64B)
 Pruned 0 symbolic links and 18 directories from /usr/local
 ```
 
@@ -65,7 +65,7 @@ Pruned 0 symbolic links and 18 directories from /usr/local
 bash-3.2$ pandoc --version
 pandoc 2.7.3
 Compiled with pandoc-types 1.17.5.4, texmath 0.11.2.2, skylighting 0.8.1
-Default user data directory: /Users/chengyihe/.local/share/pandoc or /Users/chengyihe/.pandoc
+Default user data directory: /Users/dancooper/.local/share/pandoc or /Users/dancooper/.pandoc
 Copyright (C) 2006-2019 John MacFarlane
 Web:  http://pandoc.org
 This is free software; see the source for copying conditions.
