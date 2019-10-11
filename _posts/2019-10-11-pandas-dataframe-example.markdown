@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "panda-dataframe-example"
+title: "pandas-dataframe-example"
 date:  2019-10-11 20:30:00  +0800
 categories: [dev]
 tags: [python, panda]
@@ -27,13 +27,14 @@ bash-3.2$ python3 --version
 Python 3.7.3
 ```
 
-## numpy version
+## module version
 ```bash
-bash-3.2$ pip3 list | grep numpy
-numpy                1.17.2 
+bash-3.2$ pip3 list | grep pandas
+pandas               0.25.1 
 ```
 
-## source
+## layout of dataframe
+### source
 ```python
 import pandas as pd
 
@@ -46,8 +47,7 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-
-## output
+### output
 ```bash
     Name  Age
 0    Tom   20
@@ -55,3 +55,28 @@ if __name__ == "__main__":
 2  krish   19
 3   jack   18
 ```
+
+## partial column
+### source
+```python
+import pandas as pd
+
+def main():
+    data = {'Name':['Tom', 'nick', 'krish', 'jack'],
+        'Age':[20, 21, 19, 18]}
+    df = pd.DataFrame(data)
+    print(df['Name'])
+
+if __name__ == "__main__":
+    main()
+```
+
+### output
+```bash
+0      Tom
+1     nick
+2    krish
+3     jack
+Name: Name, dtype: object
+```
+
