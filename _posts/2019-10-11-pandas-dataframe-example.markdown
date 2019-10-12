@@ -23,60 +23,55 @@ BuildVersion:   17G4015
 
 ## python version
 ```bash
-bash-3.2$ python3 --version
-Python 3.7.3
+bash-3.2$ python3
+Python 3.7.3 (default, Mar 27 2019, 09:23:39) 
+[Clang 10.0.0 (clang-1000.11.45.5)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
 ```
 
 ## module version
-```bash
-bash-3.2$ pip3 list | grep pandas
-pandas               0.25.1 
-```
-
-## layout of dataframe
-### source
 ```python
-import pandas as pd
-
-def main():
-    data = {'Name':['Tom', 'nick', 'krish', 'jack'],
-        'Age':[20, 21, 19, 18]}
-    df = pd.DataFrame(data)
-    print(df)
-
-if __name__ == "__main__":
-    main()
-```
-### output
-```bash
-    Name  Age
-0    Tom   20
-1   nick   21
-2  krish   19
-3   jack   18
+>>> import pandas as pd
+>>> print(pd.__version__)
+0.25.1
 ```
 
-## partial column
-### source
-```python
-import pandas as pd
-
-def main():
-    data = {'Name':['Tom', 'nick', 'krish', 'jack'],
-        'Age':[20, 21, 19, 18]}
-    df = pd.DataFrame(data)
-    print(df['Name'])
-
-if __name__ == "__main__":
-    main()
+## construct dataframe from dict
+```
+>>> d = {'col1': [1, 2, 3], 'col2': [4, 5, 6], 'col3': [7, 8, 9]}
+>>> df = pd.DataFrame(data=d)
+>>> df
+   col1  col2  col3
+0     1     4     7
+1     2     5     8
+2     3     6     9
 ```
 
-### output
-```bash
-0      Tom
-1     nick
-2    krish
-3     jack
-Name: Name, dtype: object
+## construct dataframe from list
+```
+>>> df = pd.DataFrame(data=[[1,2,3],[4,5,6],[7,8,9]], columns=['col1','col2','col3'])
+>>> df
+   col1  col2  col3
+0     1     2     3
+1     4     5     6
+2     7     8     9
+```
+
+## retrive a column of the dataframe
+```
+>>> print(df['col2'])
+0    2
+1    5
+2    8
+Name: col2, dtype: int64
+```
+
+## retrive rows of the dataframe
+```
+>>> df.loc[1:2]
+   col1  col2  col3
+1     4     5     6
+2     7     8     9
 ```
 
