@@ -6,10 +6,10 @@ categories: [dev]
 tags: [python, panda]
 ---
 
-## what is panda
+## what is pandas
 A python package which has data struceture for data analysis
 
-## what is panda.dataframe
+## what is pandas.dataframe
 A class representing two-dimensional data structure. In addition to two-dimeional data, it also store rwo  and column information.
 
 ## environment
@@ -75,7 +75,7 @@ row1     1     2     3
 row2     4     5     6
 ```
 
-## retrive row, columan and data type
+## retrive information related to row, columan and data type
 ```
 >>> df.index
 Index(['row1', 'row2', 'roe2'], dtype='object')
