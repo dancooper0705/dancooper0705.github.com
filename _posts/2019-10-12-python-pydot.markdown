@@ -36,3 +36,12 @@ Requirement already satisfied: pyparsing>=2.1.4 in /usr/local/lib/python3.7/site
 Installing collected packages: pydot
 Successfully installed pydot-1.4.1
 ```
+## install pydot-ng
+```
+bash-3.2$ pip3 install pydot_ng
+Collecting pydot_ng
+Downloading https://files.pythonhosted.org/packages/3c/5b/9a08333f2d70d404ffe42cea4f50159c4ad94feaa4d7585551c05cacef46/pydot_ng-2.0.0-py2.py3-none-any.whl
+Requirement already satisfied: pyparsing>=2.0.1 in /usr/local/lib/python3.7/site-packages (from pydot_ng) (2.4.2)
+Installing collected packages: pydot-ng
+Successfully installed pydot-ng-2.0.0
+```
