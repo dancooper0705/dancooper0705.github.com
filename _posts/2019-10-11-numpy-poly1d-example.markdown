@@ -3,7 +3,7 @@ layout: post
 title: "numpy-poly1d-example"
 date:  2019-10-11 11:00:00  +0800
 categories: [dev]
-tags: [python, numpy, poly1d]
+tags: [python, numpy]
 ---
 
 ## what is numpy
