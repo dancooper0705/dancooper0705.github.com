@@ -225,13 +225,13 @@ Test accuracy: 0.973
   2.09572724e-11 1.16346877e-10]]
 ```
 ### the first 25 train images and its label
-![the first 25 train images](/assets/2019-10-11-tensorflow-keras-classify-images-of-handwritten-digit-figure-1.png)
+![the first 25 train images](/assets/2019-10-12-tensorflow-keras-classify-images-of-handwritten-digit-figure-1.png)
 
 ### the first 15 test images and inference result
-![the first 25 test images](/assets/2019-10-11-tensorflow-keras-classify-images-of-handwritten-digit-figure-2.png)
+![the first 25 test images](/assets/2019-10-12-tensorflow-keras-classify-images-of-handwritten-digit-figure-2.png)
 
 ### only the fist test image and inference result
-![only the first train image](/assets/2019-10-11-tensorflow-keras-classify-images-of-handwritten-digit-figure-3.png)
+![only the first train image](/assets/2019-10-12-tensorflow-keras-classify-images-of-handwritten-digit-figure-3.png)
 
 ## reference
 [https://www.tensorflow.org/tutorials/keras/classification](https://www.tensorflow.org/tutorials/keras/classification)
