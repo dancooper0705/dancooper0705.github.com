@@ -35,6 +35,9 @@ matplotlib           3.1.1
 tensorflow           2.0.0
 ```
 
+## tensorflow keras model
+![the first 25 train images](/assets/2019-10-11-tensorflow-keras-classify-images-of-clothing-figure-4.png)
+
 ## source
 ```python
 import numpy as np
