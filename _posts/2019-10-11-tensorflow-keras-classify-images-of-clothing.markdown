@@ -79,12 +79,14 @@ def learn_train_images():
     model.add(keras.layers.Flatten(input_shape=(28, 28)))
     model.add(keras.layers.Dense(128, activation='relu'))
     model.add(keras.layers.Dense(10, activation='softmax'))
+    model.summary()
     model.compile(optimizer='adam',
             loss='sparse_categorical_crossentropy',
             metrics=['accuracy'])
     model.fit(train_images, train_labels, epochs=5)
-    test_loss, test_acc = model.evaluate(test_images,  test_labels, verbose=2)
-    print('\nTest accuracy:', test_acc)
+    test_scores = model.evaluate(test_images,  test_labels, verbose=2)
+    print('Test loss:', test_scores[0])
+    print('Test accuracy:', test_scores[1])
 
 def predict_all_test_images():
     predictions = model.predict(test_images)
@@ -165,31 +167,45 @@ if __name__ == "__main__":
 
 ## output
 ```bash
-2019-10-11 19:29:13.699550: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-2019-10-11 19:29:13.711464: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7ff75df7dee0 executing computations on platform Host. Devices:
-2019-10-11 19:29:13.711479: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Host, Default Version
+2019-10-12 19:32:40.993094: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-10-12 19:32:41.003973: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7fc4c651af20 executing computations on platform Host. Devices:
+2019-10-12 19:32:41.003986: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Host, Default Version
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+flatten (Flatten)            (None, 784)               0         
+_________________________________________________________________
+dense (Dense)                (None, 128)               100480    
+_________________________________________________________________
+dense_1 (Dense)              (None, 10)                1290      
+=================================================================
+Total params: 101,770
+Trainable params: 101,770
+Non-trainable params: 0
+_________________________________________________________________
 Train on 60000 samples
 Epoch 1/5
-60000/60000 [==============================] - 3s 43us/sample - loss: 0.5009 - accuracy: 0.8254
+60000/60000 [==============================] - 3s 44us/sample - loss: 0.4990 - accuracy: 0.8257
 Epoch 2/5
-60000/60000 [==============================] - 2s 40us/sample - loss: 0.3770 - accuracy: 0.8644
+60000/60000 [==============================] - 2s 38us/sample - loss: 0.3745 - accuracy: 0.8651
 Epoch 3/5
-60000/60000 [==============================] - 2s 40us/sample - loss: 0.3386 - accuracy: 0.8767
+60000/60000 [==============================] - 2s 38us/sample - loss: 0.3355 - accuracy: 0.8778
 Epoch 4/5
-60000/60000 [==============================] - 2s 39us/sample - loss: 0.3140 - accuracy: 0.8837
+60000/60000 [==============================] - 2s 38us/sample - loss: 0.3117 - accuracy: 0.8859
 Epoch 5/5
-60000/60000 [==============================] - 2s 35us/sample - loss: 0.2961 - accuracy: 0.8912
-10000/1 - 0s - loss: 0.4181 - accuracy: 0.8517
-
-Test accuracy: 0.8517
-[4.8944835e-06 4.3241350e-08 2.0837481e-07 1.3086093e-07 1.5344689e-06
- 9.8805176e-04 4.8451529e-06 4.0405896e-02 6.0406073e-06 9.5858830e-01]
-9
-9
-(28, 28)
-(1, 28, 28)
-[[1.0166592e-05 3.5205646e-13 9.9986947e-01 9.4966235e-10 1.8417431e-05
-  3.6576488e-08 1.0191622e-04 9.7885965e-16 1.6540883e-10 2.4328792e-15]]
+60000/60000 [==============================] - 2s 38us/sample - loss: 0.2946 - accuracy: 0.8917
+10000/1 - 0s - loss: 0.2992 - accuracy: 0.8783
+Test loss: 0.37171216771602633
+Test accuracy: 0.8672
+[4.5444303e-06 2.8985139e-06 2.4740308e-05 5.0351861e-07 6.3307103e-05
+ 5.4802161e-01 2.8345596e-05 1.9788887e-01 4.0743238e-04 2.5355774e-01]
+ 5
+ 9
+ (28, 28)
+ (1, 28, 28)
+ [[4.5444367e-06 2.8985210e-06 2.4740297e-05 5.0351741e-07 6.3307132e-05
+   5.4802138e-01 2.8345637e-05 1.9788916e-01 4.0743258e-04 2.5355771e-01]]
 ```
 
 ### the first 25 train images and its label
