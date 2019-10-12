@@ -123,11 +123,14 @@ def predict_single_test_images():
     # Add the image to a batch where it's the only member.
     img = (np.expand_dims(img,0))
     print(img.shape)
-    predictions_single = model.predict(img)
-    print(predictions_single)
-    plot_value_array(1, predictions_single[0], test_labels)
-    _ = plt.xticks(range(10), class_names, rotation=45)
-    np.argmax(predictions_single[0])
+    predictions = model.predict(img)
+    print(predictions)
+    i = 0
+    plt.figure(figsize=(6,3))
+    plt.subplot(1,2,1)
+    plot_image(i, predictions[0], test_labels, test_images)
+    plt.subplot(1,2,2)
+    plot_value_array(i, predictions[0], test_labels)
     plt.show()
 
 def main():
