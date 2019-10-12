@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "python-pydot"
+title: "python-graphviz"
 date:  2019-10-12 17:30:00  +0800
 categories: [dev]
 tags: [python, graphviz]
