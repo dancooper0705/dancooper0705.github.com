@@ -106,16 +106,19 @@ def predict_all_test_images():
     plt.show()
 
 def predict_single_test_images():
-    img = test_images[1]
+    img = test_images[0]
     print(img.shape)
     # Add the image to a batch where it's the only member.
     img = (np.expand_dims(img,0))
     print(img.shape)
-    predictions_single = model.predict(img)
-    print(predictions_single)
-    plot_value_array(1, predictions_single[0], test_labels)
-    _ = plt.xticks(range(10), class_names, rotation=45)
-    np.argmax(predictions_single[0])
+    predictions = model.predict(img)
+    print(predictions)
+    i = 0
+    plt.figure(figsize=(6,3))
+    plt.subplot(1,2,1)
+    plot_image(i, predictions[0], test_labels, test_images)
+    plt.subplot(1,2,2)
+    plot_value_array(i, predictions[0], test_labels)
     plt.show()
 
 def main():
@@ -188,6 +191,15 @@ Test accuracy: 0.8517
 [[1.0166592e-05 3.5205646e-13 9.9986947e-01 9.4966235e-10 1.8417431e-05
   3.6576488e-08 1.0191622e-04 9.7885965e-16 1.6540883e-10 2.4328792e-15]]
 ```
+
+### the first 25 train images and its label
+![the first 25 train images](/assets/2019-10-11-tensorflow-keras-classify-images-of-clothing-figure-1.png)
+
+### the first 15 test images and inference result
+![the first 25 test images](/assets/2019-10-11-tensorflow-keras-classify-images-of-clothing-figure-2.png)
+
+### only the fist test image and inference result
+![only the first train image](/assets/2019-10-11-tensorflow-keras-classify-images-of-clothing-figure-3.png)
 
 ## reference
 [https://www.tensorflow.org/tutorials/keras/classification](https://www.tensorflow.org/tutorials/keras/classification)
