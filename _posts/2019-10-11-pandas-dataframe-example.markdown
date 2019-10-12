@@ -3,7 +3,7 @@ layout: post
 title: "pandas-dataframe-example"
 date:  2019-10-11 20:30:00  +0800
 categories: [dev]
-tags: [python, panda]
+tags: [python, pandas]
 ---
 
 ## what is pandas
