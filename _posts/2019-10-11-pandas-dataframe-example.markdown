@@ -50,28 +50,40 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 ## construct dataframe from list
 ```
->>> df = pd.DataFrame(data=[[1,2,3],[4,5,6],[7,8,9]], columns=['col1','col2','col3'])
+>>> df = pd.DataFrame(data=[[1,2,3],[4,5,6],[7,8,9]], index=['row1','row2','roe2'], columns=['col1','col2','col3'])
 >>> df
-   col1  col2  col3
-0     1     2     3
-1     4     5     6
-2     7     8     9
+      col1  col2  col3
+row1     1     2     3
+row2     4     5     6
+roe2     7     8     9
 ```
 
-## retrive a column of the dataframe
+## retrive columns of the dataframe
 ```
->>> print(df['col2'])
-0    2
-1    5
-2    8
-Name: col2, dtype: int64
+>>> df[['col1', 'col2']]
+      col1  col2
+row1     1     2
+row2     4     5
+roe2     7     8
 ```
 
 ## retrive rows of the dataframe
 ```
->>> df.loc[1:2]
-   col1  col2  col3
-1     4     5     6
-2     7     8     9
+>>> df.loc[['row1', 'row2']]
+      col1  col2  col3
+row1     1     2     3
+row2     4     5     6
 ```
 
+## retrive row, columan and data type
+```
+>>> df.index
+Index(['row1', 'row2', 'roe2'], dtype='object')
+>>> df.columns
+Index(['col1', 'col2', 'col3'], dtype='object')
+>>> df.dtypes
+col1    int64
+col2    int64
+col3    int64
+dtype: object
+```
