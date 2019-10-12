@@ -35,7 +35,7 @@ matplotlib           3.1.1
 tensorflow           2.0.0
 ```
 
-## tensorflow kears model
+## tensorflow keras model
 ![alt text](/assets/2019-10-12-tensorflow-keras-classify-images-of-handwritten-digit-figure-4.png)
 
 ## source
