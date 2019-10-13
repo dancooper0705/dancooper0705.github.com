@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "tensorflow-keras-datasets.cifar10-classification"
+title: "tensorflow-keras-datasets-cifar10-classification"
 date:  2019-10-13 12:00:00  +0800
 categories: [dev]
 tags: [python, tensorflow, keras]
@@ -36,7 +36,7 @@ tensorflow           2.0.0
 ```
 
 ## tensorflow keras model
-![alt text](/assets/2019-10-13-tensorflow-keras-datasets.cifar10-classification-figure-4.png)
+![alt text](/assets/2019-10-13-tensorflow-keras-datasets-cifar10-classification-figure-4.png)
 
 ## source
 ```python
@@ -213,34 +213,35 @@ Non-trainable params: 0
 _________________________________________________________________
 Train on 40000 samples, validate on 10000 samples
 Epoch 1/5
-......
+40000/40000 [==============================] - 8s 201us/sample - loss: 1.9575 - accuracy: 0.2751 - val_loss: 1.9360 - val_accuracy: 0.2759
 Epoch 2/5
-......
+40000/40000 [==============================] - 8s 195us/sample - loss: 1.8635 - accuracy: 0.3169 - val_loss: 1.8657 - val_accuracy: 0.3192
 Epoch 3/5
-......
+40000/40000 [==============================] - 8s 193us/sample - loss: 1.8384 - accuracy: 0.3300 - val_loss: 1.8205 - val_accuracy: 0.3412
 Epoch 4/5
-......
+40000/40000 [==============================] - 8s 191us/sample - loss: 1.8234 - accuracy: 0.3364 - val_loss: 1.8472 - val_accuracy: 0.3291
 Epoch 5/5
-......
-Test loss: 1.7038881607055665
-Test accuracy: 0.3824
-[0.08194473 0.27152485 0.04222247 0.15538621 0.03517201 0.12644829
- 0.03377868 0.13665956 0.09280089 0.02406231]
-1
-3
-(3072,)
-(1, 3072)
-[[0.08194476 0.2715247  0.04222251 0.15538625 0.03517203 0.12644833
-  0.03377873 0.13665953 0.09280085 0.02406231]]
+40000/40000 [==============================] - 8s 191us/sample - loss: 1.8065 - accuracy: 0.3422 - val_loss: 1.8488 - val_accuracy: 0.3312
+10000/1 - 0s - loss: 1.6584 - accuracy: 0.3297
+Test loss: 1.8290688621520996
+Test accuracy: 0.3297
+[0.02208202 0.04227012 0.02013903 0.3350343  0.01797167 0.44402105
+ 0.01911547 0.04697036 0.0417988  0.01059717]
+ 5
+ 3
+ (3072,)
+ (1, 3072)
+ [[0.02208201 0.04227009 0.02013901 0.33503434 0.01797166 0.44402108
+   0.01911546 0.04697033 0.04179878 0.01059716]]
 ```
 ### the first 25 train images and its label
-![alt text](/assets/2019-10-13-tensorflow-keras-datasets.cifar10-classification-figure-1.png)
+![alt text](/assets/2019-10-13-tensorflow-keras-datasets-cifar10-classification-figure-1.png)
 
 ### the first 15 test images and inference result
-![alt text](/assets/2019-10-13-tensorflow-keras-datasets.cifar10-classification-figure-2.png)
+![alt text](/assets/2019-10-13-tensorflow-keras-datasets-cifar10-classification-figure-2.png)
 
 ### only the fist test image and inference result
-![alt text](/assets/2019-10-13-tensorflow-keras-datasets.cifar10-classification-figure-3.png)
+![alt text](/assets/2019-10-13-tensorflow-keras-datasets-cifar10-classification-figure-3.png)
 
 ## reference
 [https://www.tensorflow.org/tutorials/keras/classification](https://www.tensorflow.org/tutorials/keras/classification)
