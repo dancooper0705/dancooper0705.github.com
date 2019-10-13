@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "tensorflow-keras-classify-images-of-handwritten-digit"
+title: "tensorflow-keras-datasets-mnist-classification"
 date:  2019-10-12 18:00:00  +0800
 categories: [dev]
 tags: [python, tensorflow, keras]
@@ -36,7 +36,7 @@ tensorflow           2.0.0
 ```
 
 ## tensorflow keras model
-![alt text](/assets/2019-10-12-tensorflow-keras-classify-images-of-handwritten-digit-figure-4.png)
+![alt text](/assets/2019-10-12-tensorflow-keras-datasets-mnist-classification-figure-4.png)
 
 ## source
 ```python
@@ -228,13 +228,13 @@ Test accuracy: 0.973
   2.09572724e-11 1.16346877e-10]]
 ```
 ### the first 25 train images and its label
-![alt text](/assets/2019-10-12-tensorflow-keras-classify-images-of-handwritten-digit-figure-1.png)
+![alt text](/assets/2019-10-12-tensorflow-keras-datasets-mnist-classification-figure-1.png)
 
 ### the first 15 test images and inference result
-![alt text](/assets/2019-10-12-tensorflow-keras-classify-images-of-handwritten-digit-figure-2.png)
+![alt text](/assets/2019-10-12-tensorflow-keras-datasets-mnist-classification-figure-2.png)
 
 ### only the fist test image and inference result
-![alt text](/assets/2019-10-12-tensorflow-keras-classify-images-of-handwritten-digit-figure-3.png)
+![alt text](/assets/2019-10-12-tensorflow-keras-datasets-mnist-classification-figure-3.png)
 
 ## reference
 [https://www.tensorflow.org/tutorials/keras/classification](https://www.tensorflow.org/tutorials/keras/classification)
