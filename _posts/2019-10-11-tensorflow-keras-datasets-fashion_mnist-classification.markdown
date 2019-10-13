@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "tensorflow-keras-classify-images-of-clothing"
+title: "tensorflow-keras-datasets-fashion_mnist-classification"
 date:  2019-10-11 19:00:00  +0800
 categories: [dev]
 tags: [python, tensorflow, keras]
@@ -36,7 +36,7 @@ tensorflow           2.0.0
 ```
 
 ## tensorflow keras model
-![the first 25 train images](/assets/2019-10-11-tensorflow-keras-classify-images-of-clothing-figure-4.png)
+![the first 25 train images](/assets/2019-10-11-tensorflow-keras-datasets-fashion_mnist-classification-figure-4.png)
 
 ## source
 ```python
@@ -212,13 +212,13 @@ Test accuracy: 0.8672
 ```
 
 ### the first 25 train images and its label
-![the first 25 train images](/assets/2019-10-11-tensorflow-keras-classify-images-of-clothing-figure-1.png)
+![the first 25 train images](/assets/2019-10-11-tensorflow-keras-datasets-fashion_mnist-classification-figure-1.png)
 
 ### the first 15 test images and inference result
-![the first 25 test images](/assets/2019-10-11-tensorflow-keras-classify-images-of-clothing-figure-2.png)
+![the first 25 test images](/assets/2019-10-11-tensorflow-keras-datasets-fashion_mnist-classification-figure-2.png)
 
 ### only the fist test image and inference result
-![only the first train image](/assets/2019-10-11-tensorflow-keras-classify-images-of-clothing-figure-3.png)
+![only the first train image](/assets/2019-10-11-tensorflow-keras-datasets-fashion_mnist-classification-figure-3.png)
 
 ## reference
 [https://www.tensorflow.org/tutorials/keras/classification](https://www.tensorflow.org/tutorials/keras/classification)
