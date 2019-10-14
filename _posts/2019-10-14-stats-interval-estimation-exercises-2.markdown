@@ -8,11 +8,15 @@ tags: [python, statistics]
 
 ## question description
 ```
-A simple random sample of 50 items resulted in a sample mean of 32 and a sample
+2. A simple random sample of 50 items resulted in a sample mean of 32 and a sample
 standard-deviation of 6.
+a. Privide a 90% confidence interval for the popluation mean
+b. Privide a 95% confidence interval for the popluation mean
+c. Privide a 99% confidence interval for the popluation mean
 ```
 
 ## source code
+### dcstat.py
 ```python
 import math
 import scipy.stats
@@ -67,27 +71,26 @@ class sample:
         z_score = self.critical_value_of_z(tail_area)
         return [mean - z_score * standard_deviation, mean + z_score * standard_deviation]
 ```
+### a.py
+```python
+import sys
+import dcstat
 
-## a. Privide a 90% confidence interval for the popluation mean
+def main():
+    sample = dcstat.sample()
+    print(sample.confidence_interval_of_population_mean(90, 50, 32, 6))
+    print(sample.confidence_interval_of_population_mean(95, 50, 32, 6))
+    print(sample.confidence_interval_of_population_mean(99, 50, 32, 6))
+
+if __name__ == "__main__":
+    main()
+
 ```
-bash-3.2$ python3
-Python 3.7.4 (default, Sep  7 2019, 18:29:04)
-[Clang 10.0.0 (clang-1000.11.45.5)] on darwin
-Type "help", "copyright", "credits" or "license" for more information.
->>> import dcstat
->>> sample = dcstat.sample()
->>> print(sample.confidence_interval_of_population_mean(90, 50, 32, 6))
+
+## output
+```
+bash-3.2$ python3 a.py
 [30.60429541558799, 33.39570458441201]
-```
-
-## b. Privide a 95% confidence interval for the popluation mean
-```
->>> print(sample.confidence_interval_of_population_mean(95, 50, 32, 6))
 [30.336915410780385, 33.663084589219615]
-```
-## c. Privide a 99% confidence interval for the popluation mean
-```
->>> print(sample.confidence_interval_of_population_mean(99, 50, 32, 6))
 [29.81433635873786, 34.18566364126214]
 ```
-
