@@ -58,7 +58,10 @@ if __name__ == "__main__":
 
 ## discuss
 ```
-As output shows, the width of confidence interval is increased as the confidence
-level is increased. It make sense since a wider confidence interval is more likely
-to include the real polulation mean.
+As the output shows, the width of confidence interval is increased as the
+confidence level is increased. It make sense since a wider confidence interval
+is more likely to include the real polulation mean. To put it in another way, if
+a interval estimate with higher confidence level is required, then this
+esitimate is supposed to be wider to be more likely to include the real
+population mean.
 ```
