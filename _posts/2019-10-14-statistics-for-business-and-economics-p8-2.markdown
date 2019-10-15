@@ -33,7 +33,7 @@ def confidence_interval_of_population_mean(sample_size, sample_mean, sample_stan
 def main():
     print('90% confidence interval for population mean: ' + str(confidence_interval_of_population_mean(50, 32, 6, 90)))
     print('95% confidence interval for population mean: ' + str(confidence_interval_of_population_mean(50, 32, 6, 95)))
-    print('990% confidence interval for population mean: ' + str(confidence_interval_of_population_mean(50, 32, 6, 99)))
+    print('99% confidence interval for population mean: ' + str(confidence_interval_of_population_mean(50, 32, 6, 99)))
 
 if __name__ == "__main__":
     main()
@@ -43,5 +43,5 @@ if __name__ == "__main__":
 ```
 90% confidence interval for population mean: [30.60429541558799, 33.39570458441201]
 95% confidence interval for population mean: [30.336915410780385, 33.663084589219615]
-990% confidence interval for population mean: [29.81433635873786, 34.18566364126214]
+99% confidence interval for population mean: [29.81433635873786, 34.18566364126214]
 ```
