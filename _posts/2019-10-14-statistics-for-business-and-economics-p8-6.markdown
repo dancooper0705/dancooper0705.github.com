@@ -22,33 +22,27 @@ earnings for individuals working in the service industry.
 import math
 import scipy.stats
 
-def main():
-    sample_mean = 369
-    sample_size = 250
-    sample_standard_deviation = 50
-    confidence_level = 95
-
+def confidence_interval_of_population_mean(sample_size, sample_mean, sample_standard_deviation, confidence_level):
+    mean = sample_mean
+    standard_deviation = sample_standard_deviation / math.sqrt(sample_size)
     confidence_coefficient = confidence_level / 100
     alpha_level = 1 - confidence_coefficient
     tail_area = alpha_level / 2
-    z_score = float(scipy.stats.norm.ppf(1 - tail_area))
-    standard_deviation = sample_standard_deviation / math.sqrt(sample_size)
-    print('z_score: ' + str(z_score))
-    margin_of_error =  standard_deviation * z_score
-    print('margin_of_error: ' + str(margin_of_error))
-    population_mean_interval_estimate = [sample_mean - margin_of_error,
-sample_mean + margin_of_error]
-    print('population_mean_interval_estimate: ' +
-str(population_mean_interval_estimate))
+    z_score = scipy.stats.norm.ppf(1 - tail_area)
+    return [mean - z_score * standard_deviation, mean + z_score * standard_deviation]
+
+def main():
+    sample_size = 250
+    sample_mean = 369
+    sample_standard_deviation = 50
+    confidence_level = 95
+    print('95% confidence interval for population mean: ' + str(confidence_interval_of_population_mean(sample_size, sample_mean, sample_standard_deviation, confidence_level)))
 
 if __name__ == "__main__":
     main()
 ```
 
 ## output
-```bash
-cat a.txt | python3 a.py 2>&1 | tee  b.txt
-z_score: 1.959963984540054
-margin_of_error: 6.197950323045616
-population_mean_interval_estimate: [362.80204967695437, 375.19795032304563]
+```
+95% confidence interval for population mean: [362.80204967695437, 375.19795032304563]
 ```
