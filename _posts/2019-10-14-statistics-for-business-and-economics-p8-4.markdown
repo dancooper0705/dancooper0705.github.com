@@ -6,7 +6,7 @@ categories: [dev]
 tags: [python, statistics]
 ---
 
-## question description
+## question
 ```
 4. A 95% confidence interval for a population mean is reported to be 122 to 130. if
 the saple mean is 126 and the sample standard deviation is 16.07, what sample

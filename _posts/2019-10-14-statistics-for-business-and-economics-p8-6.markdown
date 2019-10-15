@@ -6,7 +6,7 @@ categories: [dev]
 tags: [python, statistics]
 ---
 
-## question description
+## question
 ```
 6. Mean weekly earnings of individuals working in various industries were
 reported  in The New York Times 1998 Almanac. The mean weekly earnings for

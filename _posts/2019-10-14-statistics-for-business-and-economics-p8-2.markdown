@@ -6,7 +6,7 @@ categories: [dev]
 tags: [python, statistics]
 ---
 
-## question description
+## question
 ```
 2. A simple random sample of 50 items resulted in a sample mean of 32 and a sample
 standard-deviation of 6.
