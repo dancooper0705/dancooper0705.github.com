@@ -17,6 +17,7 @@ c. Privide a 99% confidence interval for the popluation mean
 
 ## source code
 ```python
+import sys
 import math
 import scipy.stats
 
@@ -30,9 +31,9 @@ def confidence_interval_of_population_mean(sample_size, sample_mean, sample_stan
     return [mean - z_score * standard_deviation, mean + z_score * standard_deviation]
 
 def main():
-    print('90% confidence interval for population mean: ' + str(confidence_interval_of_population_mean(50, 32, 6, 90)))
-    print('95% confidence interval for population mean: ' + str(confidence_interval_of_population_mean(50, 32, 6, 95)))
-    print('99% confidence interval for population mean: ' + str(confidence_interval_of_population_mean(50, 32, 6, 99)))
+    print('90% confidence interval for population mean: ' + ' to '.join('{0:.2f}'.format(a) for a in confidence_interval_of_population_mean(50, 32, 6, 90)))
+    print('95% confidence interval for population mean: ' + ' to '.join('{0:.2f}'.format(a) for a in confidence_interval_of_population_mean(50, 32, 6, 95)))
+    print('99% confidence interval for population mean: ' + ' to '.join('{0:.2f}'.format(a) for a in confidence_interval_of_population_mean(50, 32, 6, 99)))
 
 if __name__ == "__main__":
     main()
@@ -40,7 +41,7 @@ if __name__ == "__main__":
 
 ## output
 ```
-90% confidence interval for population mean: [30.60429541558799, 33.39570458441201]
-95% confidence interval for population mean: [30.336915410780385, 33.663084589219615]
-99% confidence interval for population mean: [29.81433635873786, 34.18566364126214]
+90% confidence interval for population mean: 30.60 to 33.40
+95% confidence interval for population mean: 30.34 to 33.66
+99% confidence interval for population mean: 29.81 to 34.19
 ```
