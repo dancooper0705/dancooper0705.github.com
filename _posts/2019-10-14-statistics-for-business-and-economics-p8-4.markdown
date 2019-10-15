@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "stats-interval-estimation-exercises-4"
+title: "statistics-for-business-and-economics-p8-4"
 date:  2019-10-14 23:00:00  +0800
 categories: [dev]
 tags: [python, statistics]
