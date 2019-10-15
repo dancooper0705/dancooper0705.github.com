@@ -35,7 +35,7 @@ def main():
     sample_mean = 369
     sample_standard_deviation = 50
     confidence_level = 95
-    print('95% confidence interval for population mean: ' + str(confidence_interval_of_population_mean(sample_size, sample_mean, sample_standard_deviation, confidence_level)))
+    print('95% confidence interval for population mean: ' + ' to '.join('{0:.2f}'.format(a) for a in confidence_interval_of_population_mean(sample_size, sample_mean, sample_standard_deviation, confidence_level)))
 
 if __name__ == "__main__":
     main()
@@ -43,5 +43,5 @@ if __name__ == "__main__":
 
 ## output
 ```
-95% confidence interval for population mean: [362.80204967695437, 375.19795032304563]
+95% confidence interval for population mean: 362.80 to 375.20
 ```

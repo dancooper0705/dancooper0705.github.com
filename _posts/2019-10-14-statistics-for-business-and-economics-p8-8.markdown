@@ -41,9 +41,9 @@ def main():
     sample_size = 480
     sample_mean = 12168
     sample_standard_deviation = 2200
-    print('90% confidence interval for population mean: ' + str(confidence_interval_of_population_mean(sample_size, sample_mean, sample_standard_deviation, 90)))
-    print('95% confidence interval for population mean: ' + str(confidence_interval_of_population_mean(sample_size, sample_mean, sample_standard_deviation, 95)))
-    print('99% confidence interval for population mean: ' + str(confidence_interval_of_population_mean(sample_size, sample_mean, sample_standard_deviation, 99)))
+    print('90% confidence interval for population mean: ' + ' to '.join('{0:.0f}'.format(a) for a in confidence_interval_of_population_mean(sample_size, sample_mean, sample_standard_deviation, 90)))
+    print('95% confidence interval for population mean: ' + ' to '.join('{0:.0f}'.format(a) for a in confidence_interval_of_population_mean(sample_size, sample_mean, sample_standard_deviation, 95)))
+    print('99% confidence interval for population mean: ' + ' to '.join('{0:.0f}'.format(a) for a in confidence_interval_of_population_mean(sample_size, sample_mean, sample_standard_deviation, 99)))
 
 if __name__ == "__main__":
     main()
@@ -51,9 +51,9 @@ if __name__ == "__main__":
 
 ## output
 ```
-90% confidence interval for population mean: [12002.830703532823, 12333.169296467177]
-95% confidence interval for population mean: [11971.188644191112, 12364.811355808888]
-99% confidence interval for population mean: [11909.346034129965, 12426.653965870035]
+90% confidence interval for population mean: 12003 to 12333
+95% confidence interval for population mean: 11971 to 12365
+99% confidence interval for population mean: 11909 to 12427
 ```
 
 ## discuss
