@@ -27,7 +27,7 @@ def confidence_interval_of_population_proportion(sample_size, sample_proportion,
     z_score = scipy.stats.norm.ppf(1 - tail_area)
     return [mean - z_score * standard_deviation, mean + z_score * standard_deviation]
 
-def sample_size_for_confidence_level(sample_proportion, margin_of_error, confidence_level):
+def sample_size_for_confidence_level_of_population_proportion(sample_proportion, margin_of_error, confidence_level):
     confidence_coefficient = confidence_level / 100
     alpha_level = 1 - confidence_coefficient
     tail_area = alpha_level / 2
@@ -40,7 +40,7 @@ def main():
     confidence_level = 95
     print('sample_proportion: ' + str(sample_proportion))
     print('margin_of_error: ' + str(margin_of_error))
-    print('sample size for confidence level 95%: ' + str(sample_size_for_confidence_level(sample_proportion, margin_of_error, confidence_level)))
+    print('sample size for confidence level 95%: ' + str(sample_size_for_confidence_level_of_population_proportion(sample_proportion, margin_of_error, confidence_level)))
 
 if __name__ == "__main__":
     main()
