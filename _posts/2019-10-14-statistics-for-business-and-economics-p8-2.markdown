@@ -16,7 +16,6 @@ c. Privide a 99% confidence interval for the popluation mean
 ```
 
 ## source code
-### dcstat.py
 ```python
 import math
 import scipy.stats

@@ -14,7 +14,6 @@ size was used in the study?
 ```
 
 ## source
-### a.py
 ```python
 import sys
 import scipy.stats
@@ -40,8 +39,7 @@ if __name__ == "__main__":
 ```
 
 ## output
-```bash
-bash-3.2$ python3 a.py
+```
 z_score: 1.959963984540054
 sample_size: 62
 ```

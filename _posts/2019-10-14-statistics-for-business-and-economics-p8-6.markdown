@@ -17,7 +17,6 @@ earnings for individuals working in the service industry.
 ```
 
 ## source
-### a.py
 ```python
 import math
 import scipy.stats
