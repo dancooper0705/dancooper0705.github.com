@@ -157,7 +157,7 @@ def main():
 
     print('z-test with z-score:');
     print('reject if z_score < ' + '{0:.4f}'.format(critical_z_score))
-    if test_statistics_z_score < -critical_z_score or test_statistics_z_score > critical_z_score:
+    if test_statistics_z_score < critical_z_score:
         print('reject H0')
     else:
         print('not reject H0')
@@ -176,24 +176,24 @@ if __name__ == "__main__":
 
 ## output
 ```
-hypothesis_proportion: 0.2500
-sample_size: 400
-sample_proportion: 0.2800
-sample_standard_deviation: 0.0217
+hypothesis_proportion: 0.9100
+sample_size: 200
+sample_proportion: 0.8000
+sample_standard_deviation: 0.0202
 
-H0: population proportion <= 0.25
-Ha: population proportion > 0.25
-significance: 0.1000
-critical_z_score: 1.2816
-test_statistics_z_score: 1.3856
-p_value: 0.0829
+H0: population proportion >= 0.91
+Ha: population proportion < 0.91
+significance: 0.0500
+critical_z_score: -1.6449
+test_statistics_z_score: -5.4358
+p_value: 0.0000
 
 z-test with z-score:
-reject if z_score > 1.2816
+reject if z_score < -1.6449
 reject H0
 
 z-test with p-value:
-reject if p_value < 0.1000
+reject if p_value < 0.0500
 reject H0
 ```
 
