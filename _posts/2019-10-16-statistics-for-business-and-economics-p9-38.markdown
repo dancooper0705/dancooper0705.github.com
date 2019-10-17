@@ -109,10 +109,10 @@ def upper_tailed_p_value_with_t_score(t_score, df):
     return scipy.stats.t.cdf(-t_score, df)
 
 def lower_tailed_p_value_with_t_score(t_score, df):
-    return scipy.stats.norm.cdf(t_score)
+    return scipy.stats.t.cdf(t_score, df)
 
 def two_tailed_p_value_with_t_score(t_score, df):
-    return 2.0 * scipy.stats.norm.cdf(-abs(t_score))
+    return 2.0 * scipy.stats.t.cdf(-abs(t_score), df)
 ```
 ### a.py
 ```python
@@ -176,7 +176,7 @@ Ha: population mean != 90.0
 significance: 0.0500
 critical_t_score: 2.0639
 test_statistics_t_score: -1.8966
-p_value: 0.0579
+p_value: 0.0700
 
 t-test with t-score:
 reject if t_score < -2.0639 or t_score > 2.0639
