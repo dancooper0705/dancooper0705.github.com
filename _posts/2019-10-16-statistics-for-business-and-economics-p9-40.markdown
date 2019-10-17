@@ -25,41 +25,32 @@ b. What can you say about the p-value?
 import math
 import scipy.stats
 
-def confidence_interval_of_population_proportion(sample_size, sample_proportion,
-confidence_level):
+def confidence_interval_of_population_proportion(sample_size, sample_proportion, confidence_level):
     mean = sample_proportion
-    standard_deviation = math.sqrt(sample_proportion * (1 - sample_proportion) /
-sample_size)
+    standard_deviation = math.sqrt(sample_proportion * (1 - sample_proportion) / sample_size)
     confidence_coefficient = confidence_level / 100
     alpha_level = 1 - confidence_coefficient
     tail_area = alpha_level / 2
     z_score = scipy.stats.norm.ppf(1 - tail_area)
-    return [mean - z_score * standard_deviation, mean + z_score *
-standard_deviation]
+    return [mean - z_score * standard_deviation, mean + z_score * standard_deviation]
 
-def sample_size_for_confidence_level_of_population_proportion(sample_proportion,
-margin_of_error, confidence_level):
+def sample_size_for_confidence_level_of_population_proportion(sample_proportion, margin_of_error, confidence_level):
     confidence_coefficient = confidence_level / 100
     alpha_level = 1 - confidence_coefficient
     tail_area = alpha_level / 2
     z_score = scipy.stats.norm.ppf(1 - tail_area)
-    return math.ceil(z_score**2 * sample_proportion * (1 - sample_proportion) /
-(margin_of_error ** 2))
+    return math.ceil(z_score**2 * sample_proportion * (1 - sample_proportion) / (margin_of_error ** 2))
 
-def confidence_interval_of_population_mean_with_normal_distribution(sample_size,
-sample_mean, sample_standard_deviation, confidence_level):
+def confidence_interval_of_population_mean_with_normal_distribution(sample_size, sample_mean, sample_standard_deviation, confidence_level):
     mean = sample_mean
     standard_deviation = sample_standard_deviation / math.sqrt(sample_size)
     confidence_coefficient = confidence_level / 100
     alpha_level = 1 - confidence_coefficient
     tail_area = alpha_level / 2
     z_score = scipy.stats.norm.ppf(1 - tail_area)
-    return [mean - z_score * standard_deviation, mean + z_score *
-standard_deviation]
+    return [mean - z_score * standard_deviation, mean + z_score * standard_deviation]
 
-def
-confidence_interval_of_population_mean_with_students_t_distribution(sample_size,
-sample_mean, sample_standard_deviation, confidence_level):
+def confidence_interval_of_population_mean_with_students_t_distribution(sample_size, sample_mean, sample_standard_deviation, confidence_level):
     mean = sample_mean
     standard_deviation = sample_standard_deviation / math.sqrt(sample_size)
     confidence_coefficient = confidence_level / 100
@@ -67,20 +58,13 @@ sample_mean, sample_standard_deviation, confidence_level):
     tail_area = alpha_level / 2
     degree_freedom = sample_size - 1
     t_score = scipy.stats.t.ppf(1 - tail_area, degree_freedom)
-    return [mean - t_score * standard_deviation, mean + t_score *
-standard_deviation]
+    return [mean - t_score * standard_deviation, mean + t_score * standard_deviation]
 
-def confidence_interval_of_population_mean(sample_size, sample_mean,
-sample_standard_deviation, confidence_level,
-is_population_standard_deviationi_known=False):
+def confidence_interval_of_population_mean(sample_size, sample_mean, sample_standard_deviation, confidence_level, is_population_standard_deviationi_known=False):
     if is_population_standard_deviationi_known == True or sample_size >= 30:
-        return
-confidence_interval_of_population_mean_with_normal_distribution(sample_size,
-sample_mean, sample_standard_deviation, confidence_level)
+        return confidence_interval_of_population_mean_with_normal_distribution(sample_size, sample_mean, sample_standard_deviation, confidence_level)
     else:
-        return
-confidence_interval_of_population_mean_with_students_t_distribution(sample_size,
-sample_mean, sample_standard_deviation, confidence_level)
+        return confidence_interval_of_population_mean_with_students_t_distribution(sample_size, sample_mean, sample_standard_deviation, confidence_level)
 
 def upper_tailed_critical_z_score(significance):
     tail_area = significance
@@ -97,8 +81,7 @@ def two_tailed_critical_z_score(significance):
     critical_z_score = scipy.stats.norm.ppf(1 - tail_area)
     return critical_z_score
 
-def test_statistics_score(population_mean, sample_size, sample_mean,
-sample_standard_deviation):
+def test_statistics_score(population_mean, sample_size, sample_mean, sample_standard_deviation):
     standard_deviation = sample_standard_deviation / math.sqrt(sample_size)
     z_score = (sample_mean - population_mean) / standard_deviation
     return z_score
