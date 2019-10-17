@@ -85,8 +85,9 @@ def sample_mean_test_statistics_score(population_mean, sample_size, sample_mean,
     z_score = (sample_mean - population_mean) / standard_deviation
     return z_score
 
-def sample_proportion_test_statistics_score(population_proportion, sample_proportion, population_standard_deviation):
-    z_score = (sample_proportion - population_proportion) / population_standard_deviation
+def sample_proportion_test_statistics_score(population_proportion, sample_size, sample_proportion):
+    standard_deviation = math.sqrt(population_proportion * (1 - population_proportion) / sample_size)
+    z_score = (sample_proportion - population_proportion) / standard_deviation
     return z_score
 
 def upper_tailed_p_value_with_z_score(z_score):
@@ -124,40 +125,6 @@ def lower_tailed_p_value_with_t_score(t_score, df):
 def two_tailed_p_value_with_t_score(t_score, df):
     t_score = 2.0 * scipy.stats.t.cdf(-abs(t_score), df)
     return t_score
-
-def main():
-    print('example1, sample size < 30, use t-score to estimate confidence interval')
-    sample_size = 20
-    sample_mean = 17.25
-    sample_standard_deviation = 3.3
-    print('sample.size: ' + str(sample_size))
-    print('sample.mean: ' + str(sample_mean))
-    print('sample.standard_deviation: ' + str(sample_standard_deviation))
-    print('90% confidence interval for population mean: ' + ' to '.join('{0:.2f}'.format(a) for a in confidence_interval_of_population_mean(sample_size, sample_mean, sample_standard_deviation, 90)))
-    print('95% confidence interval for population mean: ' + ' to '.join('{0:.2f}'.format(a) for a in confidence_interval_of_population_mean(sample_size, sample_mean, sample_standard_deviation, 95)))
-    print('99% confidence interval for population mean: ' + ' to '.join('{0:.2f}'.format(a) for a in confidence_interval_of_population_mean(sample_size, sample_mean, sample_standard_deviation, 99)))
-    print()
-
-    print('example2, p = sample proportion, n*p >= 5 && n*(1-p)>=5')
-    sample_size = 800
-    sample_proportion = 0.7
-    print('sample_size: ' + str(sample_size))
-    print('sample_proportion: ' + str(sample_proportion))
-    print('90% confidence interval for population proportion: ' + ' to '.join('{0:.4f}'.format(a) for a in confidence_interval_of_population_proportion(sample_size, sample_proportion, 90)))
-    print('95% confidence interval for population proportion: ' + ' to '.join('{0:.4f}'.format(a) for a in confidence_interval_of_population_proportion(sample_size, sample_proportion, 95)))
-    print()
-
-    print('example3')
-    sample_proportion = 0.03
-    margin_of_error = 0.01
-    confidence_level = 95
-    print('sample_proportion: ' + str(sample_proportion))
-    print('margin_of_error: ' + str(margin_of_error))
-    print('sample size for confidence level 95%: ' + str(sample_size_for_confidence_level_of_population_proportion(sample_proportion, margin_of_error, confidence_level)))
-    print()
-
-if __name__ == "__main__":
-    main()
 ```
 ### a.py
 ```python
@@ -170,16 +137,16 @@ def main():
     hypothesis_proportion = 0.20
     sample_size = 400
     sample_proportion = 0.175
-    population_standard_deviation = math.sqrt(hypothesis_proportion * (1 - hypothesis_proportion) / sample_size)
+    sample_standard_deviation = math.sqrt(hypothesis_proportion * (1 - hypothesis_proportion) / sample_size)
     significance = 0.05
     print('hypothesis_proportion: ' + '{0:.4f}'.format(hypothesis_proportion))
     print('sample_size: ' + '{0:d}'.format(sample_size))
     print('sample_proportion: ' + '{0:.4f}'.format(sample_proportion))
-    print('population_standard_deviation: ' + '{0:.4f}'.format(population_standard_deviation))
+    print('sample_standard_deviation: ' + '{0:.4f}'.format(sample_standard_deviation))
     print()
 
     critical_z_score = dcstats.two_tailed_critical_z_score(significance)
-    test_statistics_z_score = dcstats.sample_proportion_test_statistics_score(hypothesis_proportion, sample_proportion, population_standard_deviation)
+    test_statistics_z_score = dcstats.sample_proportion_test_statistics_score(hypothesis_proportion, sample_size, sample_proportion)
     p_value = dcstats.two_tailed_p_value_with_z_score(test_statistics_z_score)
     print('H0: population proportion = ' + '{0:.4}'.format(hypothesis_proportion))
     print('Ha: population proportion != ' + '{0:.4}'.format(hypothesis_proportion))
@@ -213,7 +180,7 @@ if __name__ == "__main__":
 hypothesis_proportion: 0.2000
 sample_size: 400
 sample_proportion: 0.1750
-population_standard_deviation: 0.0200
+sample_standard_deviation: 0.0200
 
 H0: population proportion = 0.2
 Ha: population proportion != 0.2
