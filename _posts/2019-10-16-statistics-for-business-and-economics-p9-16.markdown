@@ -3,7 +3,7 @@ layout: post
 title: "statistics-for-business-and-economics-p9-16"
 date:  2019-10-16 10:00:00  +0800
 categories: [dev]
-tags: [python, statistics]
+tags: [statistics]
 ---
 
 ## question
