@@ -3,7 +3,7 @@ layout: post
 title: "tensorflow-keras-datasets-fashion_mnist-classification"
 date:  2019-10-11 19:00:00  +0800
 categories: [dev]
-tags: [python, tensorflow, keras]
+tags: [tensorflow, keras]
 ---
 
 ## what is tensorflow

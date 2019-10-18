@@ -3,7 +3,7 @@ layout: post
 title: "tensorflow-keras-datasets-imdb-print-data"
 date:  2019-10-13 15:00:00  +0800
 categories: [dev]
-tags: [python, tensorflow, keras]
+tags: [tensorflow, keras]
 ---
 
 ## what is tensorflow
