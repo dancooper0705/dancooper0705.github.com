@@ -122,7 +122,7 @@ if __name__ == "__main__":
     main()
 ```
 
-### output
+## output
 ```
 row_total: [58, 50]
 col_total: [35, 33, 40]
@@ -143,4 +143,10 @@ do not reject H0
 test with p-value:
 reject H0 if p-value < 0.0500
 do not reject H0
+```
+
+## conclusion
+```
+Statistics test couldn't reject the claim that the gender and favorites sport
+are independent.
 ```
