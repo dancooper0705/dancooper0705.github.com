@@ -76,6 +76,56 @@ def query_linear_regression_with_ternary_search(x, y):
     print('query_linear_regression_with_ternary_search')
     print('x: ' + str(x))
     print('y: ' + str(y))
+    print('b0: ' + str(b0))
+    print('b1: ' + str(b1))
+    print('y = {0:.4f} + {1:.4f} * x'.format(b0, b1))
+    print('SST = {0:.4f}'.format(SST))
+    print('SSR = {0:.4f}'.format(SSR))
+    print('SSE = {0:.4f}'.format(SSE))
+    print('r2 = {0:.4f}'.format(r2))
+    print('r = {0:.4f}'.format(r))
+
+def query_linear_regression_with_gradient_descent(x, y):
+    num = len(x)
+    x = np.array(x, dtype=np.float64)
+    y = np.array(y, dtype=np.float64)
+    eps = (0.1) ** 3 
+    delta = (10.0) ** 5
+    rate = 0.99
+    pos = [100, 2000]
+    while delta >= eps:
+        #print('pos: ' + str(pos))
+        #print('SSE: ' + str(query_SSE(x, y, pos[0], pos[1])))
+        next_pos = []
+        next_pos.append([pos[0] - delta, pos[1]])
+        next_pos.append([pos[0] + delta, pos[1]])
+        next_pos.append([pos[0], pos[1] - delta])
+        next_pos.append([pos[0], pos[1] + delta])
+        #print('next_pos: ' + str(next_pos))
+        min_val = query_SSE(x, y, pos[0], pos[1])
+        for i in range(4):
+            val = query_SSE(x, y, next_pos[i][0], next_pos[i][1])
+            if val < min_val:
+                min_val = val
+                pos = next_pos[i]
+        delta = delta * rate
+    b0 = pos[0]
+    b1 = pos[1]
+    SSE = query_SSE(x, y, b0, b1)
+    SSR = query_SSR(x, y, b0, b1)
+    SST = SSE + SSR
+    r2 = SSR / SST
+    r = 0
+    if b1 >= 0:
+        r = math.sqrt(r2)
+    else:
+        r = -math.sqrt(r2)
+    print('query_linear_regression_with_gradient_descent')
+    print('x: ' + str(x))
+    print('y: ' + str(y))
+    print('b0: ' + str(b0))
+    print('b1: ' + str(b1))
+    print('y = {0:.4f} + {1:.4f} * x'.format(b0, b1))
     print('SST = {0:.4f}'.format(SST))
     print('SSR = {0:.4f}'.format(SSR))
     print('SSE = {0:.4f}'.format(SSE))
@@ -121,6 +171,8 @@ def main():
     print()
     query_linear_regression_with_ternary_search(x, y)
     print()
+    query_linear_regression_with_gradient_descent(x, y)
+    print()
 
 if __name__ == "__main__":
     main()
@@ -143,9 +195,24 @@ r = 0.8636
 query_linear_regression_with_ternary_search
 x: [2.6 3.4 3.6 3.2 3.5 2.9]
 y: [2800. 3100. 3500. 3000. 3400. 3100.]
+b0: 1290.5405318436833
+b1: 581.0810839343185
+y = 1290.5405 + 581.0811 * x
 SST = 335000.0025
 SSR = 249864.8673
 SSE = 85135.1351
 r2 = 0.7459
 r = 0.8636
+
+query_linear_regression_with_gradient_descent
+x: [2.6 3.4 3.6 3.2 3.5 2.9]
+y: [2800. 3100. 3500. 3000. 3400. 3100.]
+b0: -870.4333505994366
+b1: 1250.2444971217692
+y = -870.4334 + 1250.2445 * x
+SST = 1577828.3830
+SSR = 1159019.3252
+SSE = 418809.0577
+r2 = 0.7346
+r = 0.8571
 ```
