@@ -77,5 +77,5 @@ y = -240.5000 + 5.5000 * x
 x(63.0000) = 106.0000
 ```
 
-![Figure 1](/assets/2019-10-22-statistics-for-business-and-economics-p14-04-Figrure-1.png)
+![Figure 1](/assets/2019-10-22-statistics-for-business-and-economics-p14-04-Figure-1.png)
 

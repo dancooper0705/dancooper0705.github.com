@@ -76,5 +76,5 @@ y = 30.3312 + -1.8766 * x
 x(6.0000) = 19.0714
 ```
 
-![Figure 1](/assets/2019-10-22-statistics-for-business-and-economics-p14-02-Figrure-1.png)
+![Figure 1](/assets/2019-10-22-statistics-for-business-and-economics-p14-02-Figure-1.png)
 
