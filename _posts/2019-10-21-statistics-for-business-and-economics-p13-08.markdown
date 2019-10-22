@@ -43,10 +43,12 @@ def query_analysis_of_variance(test_data, significance):
     print('sample_variance: ' + str(sample_variance))
     print('sample_standard_deviation: ' + str(sample_standard_deviation))
     print()
-    overall_sample_number = np.array(test_data).size
-    overall_sample_mean = np.mean(np.array(test_data))
-    overall_sample_variance = np.var(np.array(test_data), ddof=1)
-    overall_sample_standard_deviation = np.std(np.array(test_data), ddof=1)
+    overall_test_data = [a for data in test_data for a in data]
+    overall_sample_number = np.array(overall_test_data).size
+    overall_sample_mean = np.mean(np.array(overall_test_data))
+    overall_sample_variance = np.var(np.array(overall_test_data), ddof=1)
+    overall_sample_standard_deviation = np.std(np.array(overall_test_data), ddof=1)
+    print('overall_test_data: ' + str(overall_test_data))
     print('overall_sample_number: ' + str(overall_sample_number))
     print('overall_sample_mean: ' + str(overall_sample_mean))
     print('overall_sample_variance: ' + str(overall_sample_variance))
@@ -90,6 +92,7 @@ def query_analysis_of_variance(test_data, significance):
         print('do not reject H0')
 
 def main():
+    # test_data = [[15, 14, 25, 13, 14, 12, 23, 17, 13, 16, 15, 16], [19, 15, 12, 24, 19, 22, 17], [21, 14, 20, 16, 12, 13, 21, 11, 20, 15]]
     test_data = [[6, 5, 4, 5, 6, 4], [5, 5, 4, 4, 5, 4], [6, 7, 6, 5, 6, 6]]
     significance = 0.05
     query_analysis_of_variance(test_data, significance)
@@ -107,6 +110,7 @@ sample_mean: [5.0, 4.5, 6.0]
 sample_variance: [0.8, 0.3, 0.4]
 sample_standard_deviation: [0.8944271909999159, 0.5477225575051661, 0.6324555320336759]
 
+overall_test_data: [6, 5, 4, 5, 6, 4, 5, 5, 4, 4, 5, 4, 6, 7, 6, 5, 6, 6]
 overall_sample_number: 18
 overall_sample_mean: 5.166666666666667
 overall_sample_variance: 0.8529411764705882
