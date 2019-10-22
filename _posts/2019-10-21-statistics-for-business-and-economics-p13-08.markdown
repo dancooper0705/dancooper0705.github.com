@@ -26,7 +26,7 @@ Marketing Managers | Marketing Research | Advertising
 
 ## source
 ```python
-mport math
+import math
 import scipy.stats
 import numpy as np
 
