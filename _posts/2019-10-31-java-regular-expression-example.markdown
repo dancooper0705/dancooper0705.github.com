@@ -79,7 +79,7 @@ a1111.5b234.001c567.32
 
 ## string matching and replace all matched with replacement
 ### source
-```
+```java
 import java.io.*;
 import java.util.*;
 import java.math.*;
