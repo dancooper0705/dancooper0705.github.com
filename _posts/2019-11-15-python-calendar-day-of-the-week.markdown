@@ -7,8 +7,8 @@ tags: [python, calendar]
 ---
 
 ## question
+**Day of the week**
 ```
-[Day of the week]
 Given a date, return the corresponding day of the week for that date.
 ```
 
@@ -34,5 +34,8 @@ Type "help", "copyright", "credits" or "license" for more information.
 ```python
 >>> import calendar
 >>> calendar.day_name[calendar.weekday(2019, 11, 15)]
+'Friday'
+>>> from datetime import date
+>>> calendar.day_name[date(2019,11,15).weekday()]
 'Friday'
 ```
