@@ -30,7 +30,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> 
 ```
 
-## source & output
+## example
 ```python
 >>> import calendar
 >>> calendar.day_name[calendar.weekday(2019, 11, 15)]
